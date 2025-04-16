@@ -9,6 +9,7 @@ from routes.ProductRoutes import router as product_router
 from routes.ReviewRoutes import router as review_router
 from config.BeanieHelper import init_db 
 from routes.OrderRoutes import router as order_router
+from controllers.CartController import  cart_router
 
 from fastapi.middleware.cors import CORSMiddleware  # type: ignore
 
@@ -38,3 +39,4 @@ app.include_router(sub_category_router)
 app.include_router(product_router)
 app.include_router(review_router)
 app.include_router(order_router)
+app.include_router(cart_router)
